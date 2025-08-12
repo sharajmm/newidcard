@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Digital ID Card Generator
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.5/JsBarcode.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+  <body>
+    <div id="homePage" class="page active">
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <h2>ID Generator</h2>
+          </div>
+        </div>
+      </nav>
+      <main class="home-main">
+        <section class="hero">
+          <div class="hero-content">
+            <h1>Digital ID Card Generator</h1>
+            <h2>Professional Student Identity Cards Made Easy</h2>
+            <p>
+              Create high-quality, official-looking student ID cards with our 
+              advanced generator. Specially designed for Dr.N.G.P. Arts and Science College 
+              students with authentic design templates and secure features.
+            </p>
+            <div class="hero-buttons">
+              <button id="signInBtn" class="btn-primary">
+                Get Started
+              </button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="id-card-preview">
+              <div class="card-front">
+                <div class="college-header">
+                  <div class="college-logo">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 3L1 9L12 15L21 12.09V17H23V9L12 3ZM18.82 9L12 12.72L5.18 9L12 5.28L18.82 9ZM17 15.99L12 18.72L7 15.99V13.27L12 16L17 13.27V15.99Z"
+                        fill="#4a90e2"
+                      />
+                    </svg>
+                  </div>
+                  <div class="college-info">
+                    <h3>Dr.N.G.P. ASC</h3>
+                    <p>Student ID Card</p>
+                    <small>Professional Design</small>
+                  </div>
+                </div>
+                <h4>IDENTITY CARD PREVIEW</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="features">
+          <div class="container">
+            <h2>Why Choose Our Generator?</h2>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 8H20C21.1 8 22 8.9 22 10V20C22 21.1 21.1 22 20 22H4C2.9 22 2 21.1 2 20V10C2 8.9 2.9 8 4 8H6V6C6 3.8 7.8 2 10 2H14C16.2 2 18 3.8 18 6V8ZM10 4C8.9 4 8 4.9 8 6V8H16V6C16 4.9 15.1 4 14 4H10Z"
+                      fill="#4a90e2"
+                    />
+                  </svg>
+                </div>
+                <h3>Secure & Authorized</h3>
+                <p>
+                  Protected access with Google authentication ensures only 
+                  authorized users can generate official ID cards.
+                </p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14 2H6C4.9 2 4.01 2.9 4.01 4L4 20C4 21.1 4.89 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H13V9H18V20Z"
+                      fill="#4a90e2"
+                    />
+                  </svg>
+                </div>
+                <h3>Easy Form Interface</h3>
+                <p>
+                  Simple, intuitive form design makes entering student information
+                  quick and error-free with real-time preview.
+                </p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19 9H15L13.5 7.5C13.1 7.1 12.6 6.9 12 6.9H4C2.9 6.9 2 7.8 2 8.9V15C2 16.1 2.9 17 4 17H20C21.1 17 22 16.1 22 15V11C22 9.9 21.1 9 20 9H19ZM20 15H4V10H12L13.5 11.5C13.9 11.9 14.4 12.1 15 12.1H20V15Z"
+                      fill="#4a90e2"
+                    />
+                  </svg>
+                </div>
+                <h3>Instant Download</h3>
+                <p>
+                  Generate and download both sides of your ID card as high-resolution 
+                  PNG files ready for printing or digital use.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about">
+          <div class="container">
+            <h2>About This Project</h2>
+            <div class="about-content">
+              <div class="about-text">
+                <p>
+                  This Digital ID Card Generator is a custom-built solution specifically
+                  designed to create authentic student identity cards for Dr.N.G.P. Arts
+                  and Science College. Our tool replicates the exact design specifications
+                  and maintains professional standards.
+                </p>
+                <ul>
+                  <li>
+                    <span class="check-icon">✓</span> Exact replica of official
+                    Dr.N.G.P. college ID design
+                  </li>
+                  <li>
+                    <span class="check-icon">✓</span> Professional barcode
+                    generation system
+                  </li>
+                  </li>
+                  <li>
+                    <span class="check-icon">✓</span> High-quality PNG downloads
+                    for printing
+                  </li>
+                  <li>
+                    <span class="check-icon">✓</span> Secure access control and
+                    authentication
+                  </li>
+                  <li>
+                    <span class="check-icon">✓</span> Mobile-responsive
+                    interface design
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <p>
+            &copy; 2025 ID Generator - kavin
+          </p>
+        </div>
+      </footer>
+    </div>
+    <div id="studioPage" class="page">
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <h2>ID Generator</h2>
+          </div>
+          <div class="nav-actions">
+            <span id="userEmail" class="user-email"></span>
+            <button id="signOutBtn" class="btn-secondary">Sign Out</button>
+          </div>
+        </div>
+      </nav>
+      <main class="studio-main">
+        <div class="studio-container">
+          <div class="form-section">
+            <h2>Student Information</h2>
+            <form id="studentForm" class="student-form">
+              <div class="form-group">
+                <label for="studentName">Full Name:</label>
+                <input type="text" id="studentName" required />
+              </div>
+              <div class="form-group">
+                <label for="course">Course:</label>
+                <select id="course" required>
+                  <option value="">Select Course</option>
+                  <option value="B.Sc. Computer Science">
+                    B.Sc. Computer Science
+                  </option>
+                  <option value="B.Sc. Computer Science (Cognitive Systems)">
+                    B.Sc. Computer Science (Cognitive Systems)
+                  </option>
+                  <option value="B.Com">B.Com</option>
+                  <option value="B.A. English">B.A. English</option>
+                  <option value="B.Sc. Mathematics">B.Sc. Mathematics</option>
+                  <option value="B.Sc. Physics">B.Sc. Physics</option>
+                  <option value="B.Sc. Chemistry">B.Sc. Chemistry</option>
+                  <option value="B.Sc. Biology">B.Sc. Biology</option>
+                  <option value="M.Sc. Computer Science">
+                    M.Sc. Computer Science
+                  </option>
+                  <option value="M.Com">M.Com</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="rollNo">Roll Number:</label>
+                <input type="text" id="rollNo" required />
+              </div>
+              <div class="form-group">
+                <label for="duration">Duration:</label>
+                <input type="text" id="duration" required />
+              </div>
+              <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required />
+              </div>
+              <div class="form-group">
+                <label for="bloodGroup">Blood Group:</label>
+                <select id="bloodGroup" required>
+                  <option value="">Select Blood Group</option>
+                  <option value="A +ve">A +ve</option>
+                  <option value="A -ve">A -ve</option>
+                  <option value="B +ve">B +ve</option>
+                  <option value="B -ve">B -ve</option>
+                  <option value="AB +ve">AB +ve</option>
+                  <option value="AB -ve">AB -ve</option>
+                  <option value="O +ve">O +ve</option>
+                  <option value="O -ve">O -ve</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contactNo">Contact Number:</label>
+                <input type="tel" id="contactNo" required />
+              </div>
+              <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" required rows="3" style="resize: none;"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="photo">Student Photo:</label>
+                <input type="file" id="photo" accept="image/*" required />
+              </div>
+              <div class="form-buttons">
+                <button type="submit" class="btn-primary">
+                  Generate ID Card
+                </button>
+                <button type="button" id="clearFormBtn" class="btn-secondary">
+                  Clear Form
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="preview-section">
+            <h2>ID Card Preview</h2>
+            <div class="card-preview">
+              <div id="idCardFront" class="id-card front">
+                <div class="card-header">
+                  <div class="college-logo-circle">
+                    <img
+                      src="logo.png"
+                      alt="Dr.N.G.P. Logo"
+                      class="college-logo-img"
+                    />
+                  </div>
+                  <div class="college-title">
+                    <h1 id="cardCollegeName" class="college-display">Dr.N.G.P.</h1>
+                    <h2 id="cardCollegeSubtitle" class="college-display">Arts and Science College</h2>
+                    <input type="text" id="cardCollegeNameEdit" class="college-edit" value="Dr.N.G.P." style="display: none;">
+                    <input type="text" id="cardCollegeSubtitleEdit" class="college-edit" value="Arts and Science College" style="display: none;">
+                    <h3>(Autonomous)</h3>
+                  </div>
+                </div>
+                <div class="card-type">STUDENT IDENTITY CARD</div>
+                <div class="student-photo-container">
+                  <div class="student-photo">
+                    <div id="photoPlaceholder" class="photo-placeholder">
+                      <span>Upload Photo</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="student-details">
+                  <div class="detail-row">
+                    <span class="label">Name</span>
+                    <span class="separator">:</span>
+                    <span id="displayName" class="value">STUDENT NAME</span>
+                  </div>
+                  <div class="detail-row">
+                    <span class="label">Course</span>
+                    <span class="separator">:</span>
+                    <span id="displayCourse" class="value">Course Name</span>
+                  </div>
+                  <div class="detail-row">
+                    <span class="label">Roll No</span>
+                    <span class="separator">:</span>
+                    <span id="displayRollNo" class="value">Roll Number</span>
+                  </div>
+                  <div class="detail-row">
+                    <span class="label">Duration</span>
+                    <span class="separator">:</span>
+                    <span id="displayDuration" class="value">Duration</span>
+                  </div>
+                </div>
+                <div class="signature-section">
+                  <div class="signature">
+                    <div class="signature-line"></div>
+                    <span>Principal</span>
+                  </div>
+                </div>
+                <div class="college-footer">
+                  <div class="college-address college-display" id="cardCollegeAddress">
+                    Dr.N.G.P. - Kalapatti Road,<br />
+                    Coimbatore - 641 048, Tamilnadu, India.<br />
+                    Phone : (0422) - 2369100 , 2369253
+                  </div>
+                  <textarea id="cardCollegeAddressEdit" class="college-edit college-address-edit" style="display: none;">Dr.N.G.P. - Kalapatti Road,
+Coimbatore - 641 048, Tamilnadu, India.
+Phone : (0422) - 2369100 , 2369253</textarea>
+                </div>
+              </div>
+              <div id="idCardBack" class="id-card back">
+                <div class="back-details">
+                  <div class="detail-row">
+                    <span class="label">Date of Birth</span>
+                    <span class="separator">:</span>
+                    <span id="displayDob" class="value">DD.MM.YYYY</span>
+                  </div>
+                  <div class="detail-row">
+                    <span class="label">Blood Group</span>
+                    <span class="separator">:</span>
+                    <span id="displayBloodGroup" class="value"
+                      >Blood Group</span
+                    >
+                  </div>
+                  <div class="detail-row">
+                    <span class="label">Contact No.</span>
+                    <span class="separator">:</span>
+                    <span id="displayContactNo" class="value"
+                      >Contact Number</span
+                    >
+                  </div>
+                </div>
+                <div class="address-section">
+                  <div class="address-label">Address:</div>
+                  <div id="displayAddress" class="address-text">
+                    Student Address
+                  </div>
+                </div>
+                <div class="barcode-section">
+                  <svg id="barcode"></svg>
+                  <div class="roll-number-text" id="barcodeRollNo">
+                    231CG049
+                  </div>
+                </div>
+                <div class="signature-section">
+                  <div class="student-signature">
+                    <div class="signature-line"></div>
+                    <span>Student's Signature</span>
+                  </div>
+                </div>
+                <div class="website-footer">www.drngpasc.ac.in</div>
+              </div>
+            </div>
+            <div class="download-section">
+              <button id="downloadFront" class="btn-secondary" disabled>
+                Download Front Side
+              </button>
+              <button id="downloadBack" class="btn-secondary" disabled>
+                Download Back Side
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div id="adminPage" class="page">
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <h2>Admin Dashboard</h2>
+          </div>
+          <div class="nav-actions">
+            <span id="adminEmail" class="user-email"></span>
+            <button id="adminSignOutBtn" class="btn-secondary">Sign Out</button>
+          </div>
+        </div>
+      </nav>
+      <main class="admin-main">
+        <div class="admin-container">
+          <div class="admin-sidebar">
+            <h3>Admin Controls</h3>
+            <nav class="admin-nav">
+              <button class="admin-nav-btn active" data-section="emails">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="currentColor"/>
+                </svg>
+                Manage Emails
+              </button>
+              <button class="admin-nav-btn" data-section="analytics">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M16,11V3H8V9H2V21H22V11H16M10,5H14V9H10V5M4,11H10V19H4V11M12,11H20V19H12V11Z" fill="currentColor"/>
+                </svg>
+                Analytics
+              </button>
+              <button class="admin-nav-btn" data-section="settings">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.65 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" fill="currentColor"/>
+                </svg>
+                Settings
+              </button>
+            </nav>
+          </div>
+          <div class="admin-content">
+            <div id="emailsSection" class="admin-section active">
+              <div class="section-header">
+                <h2>Authorized Email Management</h2>
+                <p>Add or remove email addresses that can access the ID generator</p>
+              </div>
+              <div class="add-email-form">
+                <div class="form-row">
+                  <input type="email" id="newEmail" placeholder="Enter email address" class="email-input">
+                  <button id="addEmailBtn" class="btn-primary">Add Email</button>
+                </div>
+                <div class="bulk-import">
+                  <input type="file" id="csvImport" accept=".csv" style="display: none;">
+                  <button id="bulkImportBtn" class="btn-secondary">Import CSV</button>
+                  <span class="import-help">Upload a CSV file with email addresses</span>
+                </div>
+              </div>
+              <div class="emails-list">
+                <div class="list-header">
+                  <h3>Authorized Emails (<span id="emailCount">0</span>)</h3>
+                  <button id="refreshEmailsBtn" class="btn-secondary small">Refresh</button>
+                </div>
+                <div id="emailsList" class="emails-container">
+                  <div class="loading-emails">Loading emails...</div>
+                </div>
+              </div>
+            </div>
+            <div id="analyticsSection" class="admin-section">
+              <div class="section-header">
+                <h2>ID Generation Analytics</h2>
+                <p>Monitor ID card generation activity and user statistics</p>
+              </div>
+              <div class="stats-grid">
+                <div class="stat-card">
+                  <h3>Total IDs Generated</h3>
+                  <span class="stat-number" id="totalIds">0</span>
+                </div>
+                <div class="stat-card">
+                  <h3>Active Users</h3>
+                  <span class="stat-number" id="activeUsers">0</span>
+                </div>
+                <div class="stat-card">
+                  <h3>This Month</h3>
+                  <span class="stat-number" id="monthlyIds">0</span>
+                </div>
+              </div>
+              <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <div id="activityList" class="activity-container">
+                  <div class="loading-activity">Loading activity...</div>
+                </div>
+              </div>
+            </div>
+            <div id="settingsSection" class="admin-section">
+              <div class="section-header">
+                <h2>System Settings</h2>
+                <p>Configure ID generator settings and preferences</p>
+              </div>
+              <div class="settings-group">
+                <h3>College Information</h3>
+                <div class="setting-item">
+                  <label for="collegeName">College Name:</label>
+                  <input type="text" id="collegeName" value="Dr.N.G.P. Arts and Science College">
+                </div>
+                <div class="setting-item">
+                  <label for="collegeAddress">College Address:</label>
+                  <textarea id="collegeAddress" rows="3">Kalapatti Road, Coimbatore - 641 048, Tamil Nadu, India</textarea>
+                </div>
+              </div>
+              <div class="settings-group">
+                <h3>ID Card Settings</h3>
+                <div class="setting-item">
+                  <label>
+                    <input type="checkbox" id="requirePhotoUpload" checked>
+                    Require photo upload for ID generation
+                  </label>
+                </div>
+                <div class="setting-item">
+                  <label>
+                    <input type="checkbox" id="logActivity" checked>
+                    Log all ID generation activity
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div id="loadingOverlay" class="loading-overlay">
+      <div class="loading-spinner"></div>
+      <p>Processing...</p>
+    </div>
+    <script src="firebase-config.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+      import {
+        getAuth,
+        GoogleAuthProvider,
+        signInWithPopup,
+        signOut,
+        onAuthStateChanged,
+      } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+      import {
+        getFirestore,
+        doc,
+        getDoc,
+        setDoc,
+        deleteDoc,
+        collection,
+        getDocs,
+        addDoc,
+        query,
+        orderBy,
+        limit,
+        serverTimestamp,
+      } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+      
+      const app = initializeApp(window.firebaseConfig);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+      const provider = new GoogleAuthProvider();
+      
+      window.auth = auth;
+      window.db = db;
+      window.provider = provider;
+      window.signInWithPopup = signInWithPopup;
+      window.signOut = signOut;
+      window.onAuthStateChanged = onAuthStateChanged;
+      window.doc = doc;
+      window.getDoc = getDoc;
+      window.setDoc = setDoc;
+      window.deleteDoc = deleteDoc;
+      window.collection = collection;
+      window.getDocs = getDocs;
+      window.addDoc = addDoc;
+      window.query = query;
+      window.orderBy = orderBy;
+      window.limit = limit;
+      window.serverTimestamp = serverTimestamp;
+    </script>
+    <script src="admin.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

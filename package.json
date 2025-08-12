@@ -1,0 +1,26 @@
+{
+  "name": "digital-id-card-generator",
+  "version": "1.0.0",
+  "description": "Digital ID Card Generator for Students",
+  "main": "index.html",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "python -m http.server 8000",
+    "preview": "cd build && python -m http.server 8000"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "your-github-repo-url"
+  },
+  "keywords": [
+    "id-card",
+    "generator",
+    "firebase",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
